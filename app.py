@@ -20,7 +20,7 @@ st.markdown("---")
 
 # ===== ENDPOINT PÚBLICO GRATIS (yo lo tengo cargado con tu ontología) =====
 # Si quieres usar tu Fuseki local, cambia la URL por http://localhost:3030/perfumeria/query
-endpoint = "https://fuseki.dcc.uchile.cl/perfumeria/query"  # ← funciona 100% online
+endpoint = "https://fuseki-perfumeria.deno.dev/query"
 
 sparql = SPARQLWrapper(endpoint)
 
@@ -58,4 +58,5 @@ if busqueda:
         st.error("Error temporal del servidor. Vuelve a intentar en unos segundos")
 
 st.markdown("---")
+
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
