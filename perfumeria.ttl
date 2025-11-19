@@ -1,0 +1,733 @@
+@prefix : <http://www.UMSS.edu/ontologiaPerfumeria#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.UMSS.edu/ontologiaPerfumeria#> .
+
+<http://www.UMSS.edu/ontologiaPerfumeria> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#perteneceAFamilia
+:perteneceAFamilia rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Perfume ;
+                   rdfs:range :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#recomendadoParaEstacion
+:recomendadoParaEstacion rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Perfume ;
+                         rdfs:range :Estacion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#recomendadoParaOcasion
+:recomendadoParaOcasion rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Perfume ;
+                        rdfs:range :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneConcentracion
+:tieneConcentracion rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Perfume ;
+                    rdfs:range :Concentracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneDuracion
+:tieneDuracion rdf:type owl:ObjectProperty ;
+               rdfs:domain :Perfume ;
+               rdfs:range :Duracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneEnvase
+:tieneEnvase rdf:type owl:ObjectProperty ;
+             rdfs:domain :Perfume ;
+             rdfs:range :Envase .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneExclusividad
+:tieneExclusividad rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Perfume ;
+                   rdfs:range :Exclusividad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneIntensidad
+:tieneIntensidad rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Perfume ;
+                 rdfs:range :Intensidad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneMarca
+:tieneMarca rdf:type owl:ObjectProperty ;
+            rdfs:domain :Perfume ;
+            rdfs:range :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneNotaCorazon
+:tieneNotaCorazon rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Perfume ;
+                  rdfs:range :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneNotaFondo
+:tieneNotaFondo rdf:type owl:ObjectProperty ;
+                rdfs:domain :Perfume ;
+                rdfs:range :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneNotaSalida
+:tieneNotaSalida rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Perfume ;
+                 rdfs:range :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#tieneProyeccion
+:tieneProyeccion rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Perfume ;
+                 rdfs:range :Proyeccion .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#anioLanzamiento
+:anioLanzamiento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Perfume ;
+                 rdfs:range xsd:gYear .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#aptoPielGrasa
+:aptoPielGrasa rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Perfume ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#descripcion
+:descripcion rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Perfume ;
+             rdfs:range xsd:string .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#esIconoClasico
+:esIconoClasico rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Perfume ;
+                rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#esMasVendido
+:esMasVendido rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Perfume ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#esSinAlcohol
+:esSinAlcohol rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Perfume ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#esUnisex
+:esUnisex rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Perfume ;
+          rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#estaDescontinuado
+:estaDescontinuado rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Perfume ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#libreDeCrueldad
+:libreDeCrueldad rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Perfume ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#moneda
+:moneda rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Perfume ;
+        rdfs:range xsd:string .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#nombrePerfume
+:nombrePerfume rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Perfume ;
+               rdfs:range xsd:string .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#precioValor
+:precioValor rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Perfume ;
+             rdfs:range xsd:decimal .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#volumenML
+:volumenML rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Envase ;
+           rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Concentracion
+:Concentracion rdf:type owl:Class ;
+               rdfs:label "Concentración"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Duracion
+:Duracion rdf:type owl:Class ;
+          rdfs:label "Duración"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Envase
+:Envase rdf:type owl:Class ;
+        rdfs:label "Envase"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Estacion
+:Estacion rdf:type owl:Class ;
+          rdfs:label "Estación"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Exclusividad
+:Exclusividad rdf:type owl:Class ;
+              rdfs:label "Exclusividad"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Familia
+:Familia rdf:type owl:Class ;
+         rdfs:label "Familia olfativa"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Intensidad
+:Intensidad rdf:type owl:Class ;
+            rdfs:label "Intensidad"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Marca
+:Marca rdf:type owl:Class ;
+       rdfs:label "Marca"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Nota
+:Nota rdf:type owl:Class ;
+      rdfs:label "Nota olfativa"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Ocasion
+:Ocasion rdf:type owl:Class ;
+         rdfs:label "Ocasión"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Perfume
+:Perfume rdf:type owl:Class ;
+         rdfs:label "Perfume"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Proyeccion
+:Proyeccion rdf:type owl:Class ;
+            rdfs:label "Proyección"@es .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Acuatica
+:Acuatica rdf:type owl:NamedIndividual ,
+                   :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Almizcle
+:Almizcle rdf:type owl:NamedIndividual ,
+                   :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Amaderada
+:Amaderada rdf:type owl:NamedIndividual ,
+                    :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Ambra
+:Ambra rdf:type owl:NamedIndividual ,
+                :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#AquaDiGio_EDT
+:AquaDiGio_EDT rdf:type owl:NamedIndividual ,
+                        :Perfume ;
+               :perteneceAFamilia :Acuatica ,
+                                  :Aromatica ;
+               :recomendadoParaEstacion :Verano ;
+               :recomendadoParaOcasion :Oficina ,
+                                       :UsoDiario ;
+               :tieneMarca :Armani ;
+               :tieneNotaCorazon :NotasMarinas ;
+               :anioLanzamiento "1996"^^xsd:gYear ;
+               :aptoPielGrasa "true"^^xsd:boolean ;
+               :esIconoClasico "true"^^xsd:boolean ;
+               :esMasVendido "true"^^xsd:boolean ;
+               :esUnisex "false"^^xsd:boolean ;
+               :estaDescontinuado "false"^^xsd:boolean ;
+               :libreDeCrueldad "false"^^xsd:boolean ;
+               :moneda "BOB" ;
+               :nombrePerfume "Acqua di Giò Eau de Toilette" ;
+               :precioValor 550.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Armani
+:Armani rdf:type owl:NamedIndividual ,
+                 :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Aromatica
+:Aromatica rdf:type owl:NamedIndividual ,
+                    :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#BleuDeChanel_EDP
+:BleuDeChanel_EDP rdf:type owl:NamedIndividual ,
+                           :Perfume ;
+                  :perteneceAFamilia :Amaderada ;
+                  :recomendadoParaEstacion :Otono ;
+                  :recomendadoParaOcasion :EventoFormal ,
+                                          :Oficina ;
+                  :tieneConcentracion :EDP ;
+                  :tieneDuracion :DuracionLarga ;
+                  :tieneExclusividad :Comercial ;
+                  :tieneIntensidad :IntensidadMedia ;
+                  :tieneMarca :Chanel ;
+                  :tieneProyeccion :ProyeccionMedia ;
+                  :anioLanzamiento "2010"^^xsd:gYear ;
+                  :aptoPielGrasa "true"^^xsd:boolean ;
+                  :esIconoClasico "true"^^xsd:boolean ;
+                  :esMasVendido "true"^^xsd:boolean ;
+                  :esUnisex "false"^^xsd:boolean ;
+                  :estaDescontinuado "false"^^xsd:boolean ;
+                  :libreDeCrueldad "false"^^xsd:boolean ;
+                  :moneda "BOB" ;
+                  :nombrePerfume "Bleu de Chanel Eau de Parfum" ;
+                  :precioValor 720.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Byredo
+:Byredo rdf:type owl:NamedIndividual ,
+                 :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Caramelo
+:Caramelo rdf:type owl:NamedIndividual ,
+                   :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Chanel
+:Chanel rdf:type owl:NamedIndividual ,
+                 :Marca ;
+        rdfs:label "Chanel"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Chocolate
+:Chocolate rdf:type owl:NamedIndividual ,
+                    :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#CitaRomantica
+:CitaRomantica rdf:type owl:NamedIndividual ,
+                        :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Citrica
+:Citrica rdf:type owl:NamedIndividual ,
+                  :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#CitricoNota
+:CitricoNota rdf:type owl:NamedIndividual ,
+                      :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#CitrusYouth_EDT
+:CitrusYouth_EDT rdf:type owl:NamedIndividual ,
+                          :Perfume ;
+                 :perteneceAFamilia :Citrica ;
+                 :recomendadoParaOcasion :Oficina ;
+                 :tieneMarca :Zara ;
+                 :anioLanzamiento "2019"^^xsd:gYear ;
+                 :aptoPielGrasa "true"^^xsd:boolean ;
+                 :esMasVendido "true"^^xsd:boolean ;
+                 :esUnisex "true"^^xsd:boolean ;
+                 :estaDescontinuado "false"^^xsd:boolean ;
+                 :libreDeCrueldad "true"^^xsd:boolean ;
+                 :moneda "BOB" ;
+                 :nombrePerfume "Citrus Youth Eau de Toilette" ;
+                 :precioValor 180.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#ClassicVetiver_EDT
+:ClassicVetiver_EDT rdf:type owl:NamedIndividual ,
+                             :Perfume ;
+                    :perteneceAFamilia :Amaderada ,
+                                       :Aromatica ;
+                    :tieneExclusividad :Nicho ;
+                    :tieneMarca :Creed ;
+                    :anioLanzamiento "2005"^^xsd:gYear ;
+                    :aptoPielGrasa "true"^^xsd:boolean ;
+                    :esIconoClasico "true"^^xsd:boolean ;
+                    :esMasVendido "false"^^xsd:boolean ;
+                    :esUnisex "false"^^xsd:boolean ;
+                    :estaDescontinuado "true"^^xsd:boolean ;
+                    :libreDeCrueldad "true"^^xsd:boolean ;
+                    :moneda "BOB" ;
+                    :nombrePerfume "Classic Vetiver Eau de Toilette" ;
+                    :precioValor 800.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Coleccion
+:Coleccion rdf:type owl:NamedIndividual ,
+                    :Exclusividad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#CologneConc
+:CologneConc rdf:type owl:NamedIndividual ,
+                      :Concentracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Comercial
+:Comercial rdf:type owl:NamedIndividual ,
+                    :Exclusividad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Creed
+:Creed rdf:type owl:NamedIndividual ,
+                :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Dior
+:Dior rdf:type owl:NamedIndividual ,
+               :Marca ;
+      rdfs:label "Dior"@es .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Diurna
+:Diurna rdf:type owl:NamedIndividual ,
+                 :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#DolceGabbana
+:DolceGabbana rdf:type owl:NamedIndividual ,
+                       :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#DuracionCorta
+:DuracionCorta rdf:type owl:NamedIndividual ,
+                        :Duracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#DuracionLarga
+:DuracionLarga rdf:type owl:NamedIndividual ,
+                        :Duracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#DuracionMedia
+:DuracionMedia rdf:type owl:NamedIndividual ,
+                        :Duracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#EDP
+:EDP rdf:type owl:NamedIndividual ,
+              :Concentracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#EDT
+:EDT rdf:type owl:NamedIndividual ,
+              :Concentracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#EdicionLimitada
+:EdicionLimitada rdf:type owl:NamedIndividual ,
+                          :Exclusividad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Envase50_Sauvage
+:Envase50_Sauvage rdf:type owl:NamedIndividual ,
+                           :Envase ;
+                  :volumenML 50 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#EventoFormal
+:EventoFormal rdf:type owl:NamedIndividual ,
+                       :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Floral
+:Floral rdf:type owl:NamedIndividual ,
+                 :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Gourmand
+:Gourmand rdf:type owl:NamedIndividual ,
+                   :Familia .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#IntensidadFuerte
+:IntensidadFuerte rdf:type owl:NamedIndividual ,
+                           :Intensidad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#IntensidadMedia
+:IntensidadMedia rdf:type owl:NamedIndividual ,
+                          :Intensidad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#IntensidadSuave
+:IntensidadSuave rdf:type owl:NamedIndividual ,
+                          :Intensidad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Invierno
+:Invierno rdf:type owl:NamedIndividual ,
+                   :Estacion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Jazmin
+:Jazmin rdf:type owl:NamedIndividual ,
+                 :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#LaVieEstBelle_EDP
+:LaVieEstBelle_EDP rdf:type owl:NamedIndividual ,
+                            :Perfume ;
+                   :perteneceAFamilia :Floral ,
+                                      :Gourmand ;
+                   :recomendadoParaEstacion :Invierno ;
+                   :recomendadoParaOcasion :CitaRomantica ;
+                   :tieneExclusividad :Comercial ;
+                   :tieneMarca :Lancome ;
+                   :anioLanzamiento "2012"^^xsd:gYear ;
+                   :aptoPielGrasa "false"^^xsd:boolean ;
+                   :esMasVendido "true"^^xsd:boolean ;
+                   :esUnisex "false"^^xsd:boolean ;
+                   :estaDescontinuado "false"^^xsd:boolean ;
+                   :libreDeCrueldad "false"^^xsd:boolean ;
+                   :moneda "BOB" ;
+                   :nombrePerfume "La Vie est Belle Eau de Parfum" ;
+                   :precioValor 580.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Lancome
+:Lancome rdf:type owl:NamedIndividual ,
+                  :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#LightBlue_EDT
+:LightBlue_EDT rdf:type owl:NamedIndividual ,
+                        :Perfume ;
+               :perteneceAFamilia :Acuatica ,
+                                  :Citrica ;
+               :recomendadoParaEstacion :Verano ;
+               :recomendadoParaOcasion :Diurna ;
+               :tieneMarca :DolceGabbana ;
+               :anioLanzamiento "2001"^^xsd:gYear ;
+               :aptoPielGrasa "true"^^xsd:boolean ;
+               :esMasVendido "true"^^xsd:boolean ;
+               :esUnisex "false"^^xsd:boolean ;
+               :estaDescontinuado "false"^^xsd:boolean ;
+               :libreDeCrueldad "false"^^xsd:boolean ;
+               :moneda "BOB" ;
+               :nombrePerfume "Light Blue Eau de Toilette" ;
+               :precioValor 320.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Natura
+:Natura rdf:type owl:NamedIndividual ,
+                 :Marca .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Nicho
+:Nicho rdf:type owl:NamedIndividual ,
+                :Exclusividad .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Nocturna
+:Nocturna rdf:type owl:NamedIndividual ,
+                   :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#NotasMarinas
+:NotasMarinas rdf:type owl:NamedIndividual ,
+                       :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#OceanMist_Cologne
+:OceanMist_Cologne rdf:type owl:NamedIndividual ,
+                            :Perfume ;
+                   :perteneceAFamilia :Acuatica ;
+                   :recomendadoParaEstacion :Verano ;
+                   :recomendadoParaOcasion :UsoDiario ;
+                   :tieneMarca :Natura ;
+                   :tieneNotaCorazon :NotasMarinas ;
+                   :anioLanzamiento "2021"^^xsd:gYear ;
+                   :aptoPielGrasa "true"^^xsd:boolean ;
+                   :esMasVendido "true"^^xsd:boolean ;
+                   :esUnisex "true"^^xsd:boolean ;
+                   :estaDescontinuado "false"^^xsd:boolean ;
+                   :libreDeCrueldad "true"^^xsd:boolean ;
+                   :moneda "BOB" ;
+                   :nombrePerfume "Ocean Mist Cologne" ;
+                   :precioValor 210.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Oficina
+:Oficina rdf:type owl:NamedIndividual ,
+                  :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Otono
+:Otono rdf:type owl:NamedIndividual ,
+                :Estacion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Oud
+:Oud rdf:type owl:NamedIndividual ,
+              :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#ParfumConc
+:ParfumConc rdf:type owl:NamedIndividual ,
+                     :Concentracion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Primavera
+:Primavera rdf:type owl:NamedIndividual ,
+                    :Estacion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#ProyeccionFuerte
+:ProyeccionFuerte rdf:type owl:NamedIndividual ,
+                           :Proyeccion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#ProyeccionMedia
+:ProyeccionMedia rdf:type owl:NamedIndividual ,
+                          :Proyeccion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#ProyeccionSuave
+:ProyeccionSuave rdf:type owl:NamedIndividual ,
+                          :Proyeccion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Rosa
+:Rosa rdf:type owl:NamedIndividual ,
+               :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#RosaIntensa_Parfum
+:RosaIntensa_Parfum rdf:type owl:NamedIndividual ,
+                             :Perfume ;
+                    :perteneceAFamilia :Floral ;
+                    :recomendadoParaEstacion :Invierno ;
+                    :recomendadoParaOcasion :CitaRomantica ;
+                    :tieneExclusividad :Coleccion ,
+                                       :EdicionLimitada ,
+                                       :Nicho ;
+                    :tieneMarca :Creed ;
+                    :anioLanzamiento "2020"^^xsd:gYear ;
+                    :aptoPielGrasa "false"^^xsd:boolean ;
+                    :esMasVendido "false"^^xsd:boolean ;
+                    :esUnisex "true"^^xsd:boolean ;
+                    :estaDescontinuado "false"^^xsd:boolean ;
+                    :libreDeCrueldad "true"^^xsd:boolean ;
+                    :moneda "BOB" ;
+                    :nombrePerfume "Rosa Intensa Parfum" ;
+                    :precioValor 1200.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Sandalo
+:Sandalo rdf:type owl:NamedIndividual ,
+                  :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Sauvage_EDT
+:Sauvage_EDT rdf:type owl:NamedIndividual ,
+                      :Perfume ;
+             :perteneceAFamilia :Amaderada ;
+             :recomendadoParaEstacion :Verano ;
+             :recomendadoParaOcasion :Nocturna ,
+                                     :UsoDiario ;
+             :tieneConcentracion :EDT ;
+             :tieneDuracion :DuracionLarga ;
+             :tieneEnvase :Envase50_Sauvage ;
+             :tieneExclusividad :Comercial ;
+             :tieneIntensidad :IntensidadFuerte ;
+             :tieneMarca :Dior ;
+             :tieneNotaFondo :Ambra ;
+             :tieneNotaSalida :CitricoNota ;
+             :tieneProyeccion :ProyeccionFuerte ;
+             :anioLanzamiento "2015"^^xsd:gYear ;
+             :esIconoClasico "false"^^xsd:boolean ;
+             :esMasVendido "true"^^xsd:boolean ;
+             :esUnisex "false"^^xsd:boolean ;
+             :estaDescontinuado "false"^^xsd:boolean ;
+             :moneda "BOB" ;
+             :nombrePerfume "Sauvage Eau de Toilette" ;
+             :precioValor 650.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#UsoDiario
+:UsoDiario rdf:type owl:NamedIndividual ,
+                    :Ocasion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Vainilla
+:Vainilla rdf:type owl:NamedIndividual ,
+                   :Nota .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#VanillaDream_Parfum
+:VanillaDream_Parfum rdf:type owl:NamedIndividual ,
+                              :Perfume ;
+                     :perteneceAFamilia :Gourmand ;
+                     :recomendadoParaEstacion :Invierno ;
+                     :recomendadoParaOcasion :CitaRomantica ;
+                     :tieneExclusividad :Nicho ;
+                     :tieneMarca :Byredo ;
+                     :tieneNotaFondo :Vainilla ;
+                     :anioLanzamiento "2022"^^xsd:gYear ;
+                     :aptoPielGrasa "false"^^xsd:boolean ;
+                     :esMasVendido "false"^^xsd:boolean ;
+                     :esSinAlcohol "true"^^xsd:boolean ;
+                     :esUnisex "true"^^xsd:boolean ;
+                     :estaDescontinuado "false"^^xsd:boolean ;
+                     :libreDeCrueldad "true"^^xsd:boolean ;
+                     :moneda "BOB" ;
+                     :nombrePerfume "Vanilla Dream Parfum" ;
+                     :precioValor 900.0 .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Verano
+:Verano rdf:type owl:NamedIndividual ,
+                 :Estacion .
+
+
+###  http://www.UMSS.edu/ontologiaPerfumeria#Zara
+:Zara rdf:type owl:NamedIndividual ,
+               :Marca .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
