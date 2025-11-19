@@ -59,11 +59,7 @@ st.subheader("Conexión con DBpedia")
 dbpedia_query = """
 PREFIX dbp: <http://dbpedia.org/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?nota ?label_es ?label_en WHERE {
-  ?nota rdfs:label ?label_es .
-  
-} LIMIT 5
-"""
+
 sparql.setQuery(dbpedia_query)
 sparql.setReturnFormat(JSON)
 dbpedia_results = sparql.query().convert()["results"]["bindings"]
@@ -76,6 +72,7 @@ st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
 
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
 
 
