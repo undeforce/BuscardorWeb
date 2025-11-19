@@ -54,8 +54,8 @@ if busqueda:
     
     if not resultados:
         st.info("Prueba con: Chanel, Zara, Citrus, Citrica, ClassicVetiver, unisex")
-        # Sección extra: Conexión DBpedia (punto b) - Ejemplo de población
-st.subheader("Conexión con DBpedia (Punto b)")
+        # Sección extra: Conexión DBpedia
+st.subheader("Conexión con DBpedia")
 dbpedia_query = """
 PREFIX dbp: <http://dbpedia.org/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -77,6 +77,7 @@ st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
 
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
 
 
