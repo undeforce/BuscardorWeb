@@ -59,7 +59,8 @@ if busqueda:
 
 st.markdown("---")
 st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
-st.balloons()
+
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
