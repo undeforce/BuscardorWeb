@@ -65,13 +65,14 @@ sparql.setReturnFormat(JSON)
 dbpedia_results = sparql.query().convert()["results"]["bindings"]
 for r in dbpedia_results:
     st.write(f"Nota: {r['label_es']['value']} (EN: {r.get('label_en', {}).get('value', 'N/A')})")
-
+"""
     
 st.markdown("---")
 st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
 
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
 
 
