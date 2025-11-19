@@ -61,8 +61,7 @@ PREFIX dbp: <http://dbpedia.org/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?nota ?label_es ?label_en WHERE {
   ?nota rdfs:label ?label_es .
-  FILTER(LANG(?label_es) = "es")
-  FILTER regex(?label_es, "vainilla|limón|jazmín", "i")
+  
 } LIMIT 5
 """
 sparql.setQuery(dbpedia_query)
@@ -77,6 +76,7 @@ st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
 
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
 
 
