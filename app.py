@@ -54,6 +54,22 @@ if busqueda:
     
     if not resultados:
         st.info("Prueba con: Chanel, Zara, Citrus, Citrica, ClassicVetiver, unisex")
+        # Sección extra: Conexión DBpedia (punto b) - Ejemplo de población
+st.subheader("Conexión con DBpedia (Punto b)")
+dbpedia_query = """
+PREFIX dbp: <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?nota ?label_es ?label_en WHERE {
+  ?nota rdfs:label ?label_es .
+  FILTER(LANG(?label_es) = "es")
+  FILTER regex(?label_es, "vainilla|limón|jazmín", "i")
+} LIMIT 5
+"""
+sparql.setQuery(dbpedia_query)
+sparql.setReturnFormat(JSON)
+dbpedia_results = sparql.query().convert()["results"]["bindings"]
+for r in dbpedia_results:
+    st.write(f"Nota: {r['label_es']['value']} (EN: {r.get('label_en', {}).get('value', 'N/A')})")
 
     
 st.markdown("---")
@@ -61,6 +77,7 @@ st.success("¡Web Semántica 2025 - Grupo 15 - UMSS")
 
 
 st.markdown("**Universidad Mayor de San Simón • Web Semántica 2025 • Patricia Rodríguez Bilbao**")
+
 
 
 
